@@ -110,8 +110,9 @@ function getToken(key){
     }
     return tokens;
 }
-function emptyToken(elemId){
-    $("#"+elemId).val("");
+function emptyToken(key){
+    var ts = new TokenStorage();
+    ts.emptyToken(key)
 }
 
 function storeToken(key,token){
